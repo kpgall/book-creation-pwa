@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#243447">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Book Creation Studio</title>
+</head>
+<body>
+<header><div><h1>Book Creation Studio</h1><p>Plan → Create → Illustrate → Produce → Publish</p></div><button id="newBook">+ New Book</button></header>
+<main>
+  <section id="dashboard">
+    <div class="section-head"><div><h2>My Books</h2><p class="muted">Local-first prototype · v0.1</p></div></div>
+    <div id="books" class="grid"></div>
+  </section>
+  <section id="workspace" class="hidden">
+    <button class="link" id="back">← Back to library</button>
+    <div id="bookHeader"></div>
+    <nav id="tabs"></nav>
+    <div id="tabContent"></div>
+  </section>
+</main>
+
+<dialog id="bookDialog">
+<form method="dialog" id="bookForm">
+<h2>Create a book</h2>
+<label>Working title<input name="title" required></label>
+<label>Book type<select name="type"><option>Children's Picture Book</option><option>Illustrated Non-Fiction</option><option>Colouring Book</option><option>Activity / Puzzle Book</option><option>Standard Non-Fiction</option></select></label>
+<label>Series<input name="series"></label>
+<div class="row"><label>Author<input name="author" value="Keith Gallagher"></label><label>Imprint<input name="imprint" value="Pagebloom Press"></label></div>
+<div class="row"><label>Trim size<input name="trim" placeholder="e.g. 8.5 × 8.5 in"></label><label>Interior<select name="interior"><option>Colour</option><option>Black & White</option></select></label></div>
+<label>Formats<input name="formats" value="Paperback"></label>
+<div class="actions"><button value="cancel" type="button" id="cancel">Cancel</button><button value="default">Create Project</button></div>
+</form></dialog>
+
+<script src="app.js"></script>
+</body></html>
